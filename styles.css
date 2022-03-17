@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+
+body{
+    background-image: url(assets/bg03.webp);
+    background-position: fixed;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/*MAIN*/
+main{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .titulo-form{
+    font-family: "Press Start 2P", sans-serif;
+    color: #9370DB;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+main .social-midia{
+    display: flex;
+    align-items: center;
+}
+main .social-midia a{
+    text-decoration: none;
+}
+main .social-midia img{
+    width: 30px;
+    margin-left: 3rem;
+}
+main .social-midia img:first-child{
+    margin-left: 0;
+}
+
+
+/*linhas-OR*/
+main .linhas-or{
+    margin-top: 1rem;
+}
+main .linhas-or span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #1C1C1C;;
+    position: relative;
+}
+main .linhas-or span::before, main .linhas-or span::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: #1C1C1C;
+}
+main .linhas-or span::after{
+    left: 50px;
+}
+
+/*FORMULARIO*/
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    color: #000000;
+}
+main form input{
+    background: #2a0047;
+    height: 3rem;
+    width: 300px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: #9370DB;
+    font-size: 1rem;
+    border: 2px solid #040B18;
+    border-radius: 10px;
+}
+main form .botao{
+    color: #000000;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 32px;
+    background-color: #9370DB;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+main form .botao:hover{
+    background: #7552b9;
+}
+
+
+/*img blackcat*/
+.imagens{
+    width: 30vw;
+    display: flex;
+    align-items: flex-end;
+}
+section.imagens img{
+    width: 40%;
+    padding-right: 2rem;
+
+}
+
+/*RESPONSIVIDADE MOBILE*/
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    section.imagens img{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    section.imagens {
+        display: none;
+    }
+    main{
+        width: 120vw;
+    }
+    main .titulo-form{
+        font-size: 2.1rem;
+    }  
+
+    main .linhas-or span{
+        font-size: 0.9rem;
+    }
+    main form input{
+        width: 250px;
+    }
+    main form .botao{
+        font-size: 0.9rem;
+    }  
+}
+@media only screen and (max-width: 450px){
+    main .titulo-form{
+        font-size: 2.1rem;
+    } 
+
+    main .linhas-or span{
+        font-size: 0.9rem;
+    }
+    main form input{
+        width: 230px;
+    }
+    main form .botao{
+        font-size: 0.9rem;
+    }
+}
